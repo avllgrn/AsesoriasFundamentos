@@ -1,20 +1,22 @@
 #include <stdio.h>
+#include <math.h>
 
 int main(void){
 
-    int a,b,c;
+    float r,a,p;
 
-    //1. Pedir datos
-    printf("Ingresa a ");
-    scanf("%d",&a);
-    printf("Ingresa b ");
-    scanf("%d",&b);
+    //1. Pedir dato(s)
+    printf("Ingresa el radio ");
+    scanf("%f",&r);
 
     //2. Calcular formula(s)
-    c=a+b;
+    a = M_PI * pow(r,2);
+    p = 2 * M_PI * r;
 
     //3. Mostrar resultado(s)
-    printf("%d + %d = %d",a,b,c);
+    printf("Radio = %f\n",r);
+    printf("Area = %f\n",a);
+    printf("Perimetro = %f\n",p);
 
     return 0;
 }
