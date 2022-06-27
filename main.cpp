@@ -1,23 +1,20 @@
 #include <stdio.h>
 
-//Declaracion de funciones
-void funcion1(void);
-void funcion2(void);
-
-//Definicion de programa
 int main(void){
 
-    printf("printf en main!\n");
-    funcion1();
-    funcion2();
+    int a,b,c;
+
+    //1. Pedir datos
+    printf("Ingresa a ");
+    scanf("%d",&a);
+    printf("Ingresa b ");
+    scanf("%d",&b);
+
+    //2. Calcular formula(s)
+    c=a+b;
+
+    //3. Mostrar resultado(s)
+    printf("%d + %d = %d",a,b,c);
 
     return 0;
-}
-
-//Definicion de funciones
-void funcion1(void){
-    printf("printf en funcion1!\n");
-}
-void funcion2(void){
-    printf("printf en funcion2!\n");
 }
