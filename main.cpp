@@ -2,21 +2,20 @@
 #include <math.h>
 
 int main(void){
+    int i,ini,fin,inc;
 
-    float r,a,p;
+    printf("Ingresa ini ");scanf("%d",&ini);
+    printf("Ingresa fin ");scanf("%d",&fin);
+    printf("Ingresa inc ");scanf("%d",&inc);
 
-    //1. Pedir dato(s)
-    printf("Ingresa el radio ");
-    scanf("%f",&r);
+    i=ini;                      // Inicio
+    do{
+        printf("%d\n",i);
 
-    //2. Calcular formula(s)
-    a = M_PI * pow(r,2);
-    p = 2 * M_PI * r;
+        i = i+inc;              // Inc/Dec
+    }while( i <= fin );         // Final
 
-    //3. Mostrar resultado(s)
-    printf("Radio = %f\n",r);
-    printf("Area = %f\n",a);
-    printf("Perimetro = %f\n",p);
+    //printf("Despues de ciclo %d\n",i);
 
     return 0;
 }
