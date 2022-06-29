@@ -1,27 +1,28 @@
 #include <stdio.h>
 #include <math.h>
 
+int factorial(int n);
+
 int main(void){
-    int i,n;
-    int f;
+    int n;
 
     printf("Ingresa n ");scanf("%d",&n);
 
-    f=1;
-    i=1;                        // Inicio
-    do{
-        //printf("i=%d\tf=%d\n",i,f);
-
-        f = f*i;                // Acumlacion
-        i = i+1;                // Inc
-    }while( i <= n );           // Final
-
-    //printf("\n\n\ni=%d\tf=%d\n",i,f);
-    printf("\n\n\n%d! = %d\n",n,f);
+    printf("\n\n\n%d! = %d\n",n,factorial(n));
 
     return 0;
 }
 
+int factorial(int n){
+    int i;
+    int f;
 
+    f=1;
+    i=1;                        // Inicio
+    do{
+        f = f*i;                // Acumlacion
+        i = i+1;                // Inc
+    }while( i <= n );           // Final
 
-
+    return f;
+}
