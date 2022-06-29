@@ -2,20 +2,23 @@
 #include <math.h>
 
 int main(void){
-    int i,ini,fin,dec;
+    int i,ini,fin;
+    int s;
 
     printf("Ingresa ini ");scanf("%d",&ini);
     printf("Ingresa fin ");scanf("%d",&fin);
-    printf("Ingresa dec ");scanf("%d",&dec);
 
+    s=0;
     i=ini;                      // Inicio
     do{
-        printf("%d\n",i);
+        //printf("i=%d\ts=%d\n",i,s);
 
-        i = i-dec;              // Inc/Dec
-    }while( i >= fin );         // Final
+        s = s+i;                // Acumlacion
+        i = i+1;                // Inc/Dec
+    }while( i <= fin );         // Final
 
-    //printf("Despues de ciclo %d\n",i);
+    //printf("\n\n\ni=%d\ts=%d\n",i,s);
+    printf("\n\n\ns=%d\n",s);
 
     return 0;
 }
