@@ -2,23 +2,26 @@
 #include <math.h>
 
 int main(void){
-    int i,ini,fin;
-    int p;
+    int i,n;
+    int f;
 
-    printf("Ingresa ini ");scanf("%d",&ini);
-    printf("Ingresa fin ");scanf("%d",&fin);
+    printf("Ingresa n ");scanf("%d",&n);
 
-    p=1;
-    i=ini;                      // Inicio
+    f=1;
+    i=1;                        // Inicio
     do{
-        //printf("i=%d\tp=%d\n",i,p);
+        //printf("i=%d\tf=%d\n",i,f);
 
-        p = p*i;                // Acumlacion
-        i = i+1;                // Inc/Dec
-    }while( i <= fin );         // Final
+        f = f*i;                // Acumlacion
+        i = i+1;                // Inc
+    }while( i <= n );           // Final
 
-    //printf("\n\n\ni=%d\tp=%d\n",i,p);
-    printf("\n\n\np=%d\n",p);
+    //printf("\n\n\ni=%d\tf=%d\n",i,f);
+    printf("\n\n\n%d! = %d\n",n,f);
 
     return 0;
 }
+
+
+
+
