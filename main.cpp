@@ -3,22 +3,22 @@
 
 int main(void){
     int i,ini,fin;
-    int s;
+    int p;
 
     printf("Ingresa ini ");scanf("%d",&ini);
     printf("Ingresa fin ");scanf("%d",&fin);
 
-    s=0;
+    p=1;
     i=ini;                      // Inicio
     do{
-        //printf("i=%d\ts=%d\n",i,s);
+        //printf("i=%d\tp=%d\n",i,p);
 
-        s = s+i;                // Acumlacion
+        p = p*i;                // Acumlacion
         i = i+1;                // Inc/Dec
     }while( i <= fin );         // Final
 
-    //printf("\n\n\ni=%d\ts=%d\n",i,s);
-    printf("\n\n\ns=%d\n",s);
+    //printf("\n\n\ni=%d\tp=%d\n",i,p);
+    printf("\n\n\np=%d\n",p);
 
     return 0;
 }
