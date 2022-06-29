@@ -9,11 +9,11 @@ int main(void){
     printf("Ingresa n ");scanf("%d",&n);
 
     s=0;
-    i=0;                        // Inicio
+    i=1;                        // Inicio
     do{
         printf("i=%d\ts=%f\n",i,s);
 
-        s = s + pow(x,i);       // Acumlacion
+        s = s + pow(x,i)/i;     // Acumlacion
         i = i+1;                // Inc
     }while( i <= n );           // Final
 
