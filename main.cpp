@@ -1,40 +1,47 @@
 #include <stdio.h>
-#include <math.h>
-
-int factorial(int n);
+#include <stdlib.h>
+#include <time.h>
 
 int main(void){
+    float V[50];
     int i,n;
-    float x,s;
+    srand(time(NULL));
 
-    printf("Ingresa x ");scanf("%f",&x);
     printf("Ingresa n ");scanf("%d",&n);
 
-    s=0;
-    i=0;                                // Inicio
-    do{
-        //printf("i=%d\ts=%f\n",i,s);
+    for(i=0;i<n;i++){
+        printf("V[%d] = %f\n",i,V[i]);
+    }
+    printf("\n\n");
 
-        s = s + pow(x,i)/factorial(i);  // Acumlacion
-        i = i+1;                        // Inc
-    }while( i <= n );                   // Final
+    for(i=0;i<n;i++){
+        V[i] = 0;
+    }
 
-    //printf("\n\n\ni=%d\ts=%f\n",i,s);
-    printf("\n\n\ne^(%f) = %f\n",x,s);
+    for(i=0;i<n;i++){
+        printf("V[%d] = %f\n",i,V[i]);
+    }
+    printf("\n\n");
+
+    for(i=0;i<n;i++){
+        printf("Ingresa V[%d] ",i);
+        scanf("%f",&V[i]);
+    }
+    printf("\n\n");
+
+    for(i=0;i<n;i++){
+        printf("V[%d] = %f\n",i,V[i]);
+    }
+    printf("\n\n");
+
+    for(i=0;i<n;i++){
+        V[i] = rand()%10;
+    }
+
+    for(i=0;i<n;i++){
+        printf("V[%d] = %f\n",i,V[i]);
+    }
+    printf("\n\n");
 
     return 0;
-}
-
-int factorial(int n){
-    int i;
-    int f;
-
-    f=1;
-    i=1;                        // Inicio
-    do{
-        f = f*i;                // Acumlacion
-        i = i+1;                // Inc
-    }while( i <= n );           // Final
-
-    return f;
 }
