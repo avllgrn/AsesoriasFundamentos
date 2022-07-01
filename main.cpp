@@ -1,31 +1,68 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <time.h>
 
 int main(void){
-
+    int M[50][50];
     int i,j,m,n;
+    srand(time(NULL));
 
-    printf("Ingresa m ");scanf("%d",&m);
-    printf("Ingresa n ");scanf("%d",&n);
-
-    for(i=0;i<m;i++){
-        for(j=0;j<n;j++){
-            printf("i=%d j=%d\n",i,j);
-        }
-    }
-
-    printf("\n\n\n");
-    system("pause");
-    system("cls");
+    printf("Ingresa filas ");scanf("%d",&m);
+    printf("Ingresa columnas ");scanf("%d",&n);
 
     for(i=0;i<m;i++){
         for(j=0;j<n;j++){
-            printf("i%dj%d\t",i,j);
+            printf("%d\t",M[i][j]);
         }
         printf("\n");
     }
-
-
     printf("\n\n\n");
+
+    //Inicializar una matriz
+    for(i=0;i<m;i++){
+        for(j=0;j<n;j++){
+            M[i][j] = 0;
+        }
+    }
+
+    for(i=0;i<m;i++){
+        for(j=0;j<n;j++){
+            printf("%d\t",M[i][j]);
+        }
+        printf("\n");
+    }
+    printf("\n\n\n");
+
+    //Leer una matriz
+    for(i=0;i<m;i++){
+        for(j=0;j<n;j++){
+            printf("Ingresa M[%d][%d] ",i,j);
+            scanf("%d",&M[i][j]);
+        }
+    }
+
+    for(i=0;i<m;i++){
+        for(j=0;j<n;j++){
+            printf("%d\t",M[i][j]);
+        }
+        printf("\n");
+    }
+    printf("\n\n\n");
+
+    //Leer una matriz
+    for(i=0;i<m;i++){
+        for(j=0;j<n;j++){
+            M[i][j] = rand()%10;
+        }
+    }
+
+    for(i=0;i<m;i++){
+        for(j=0;j<n;j++){
+            printf("%d\t",M[i][j]);
+        }
+        printf("\n");
+    }
+    printf("\n\n\n");
+
     return 0;
 }
