@@ -1,40 +1,31 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 int main(void){
-    int a[100],b[100],i,aux,mcd,mcm,n;
 
-    printf("Dame a ");scanf("%d",&a[0]);
-    printf("Dame b ");scanf("%d",&b[0]);
+    int i,j,m,n;
 
-    //Guardar el mayor de los dos, en a[0]
-    //Guardar el menor de los dos, en b[0]
-    if(a<b){
-        aux = a[0];
-        a[0] = b[0];
-        b[0] = aux;
+    printf("Ingresa m ");scanf("%d",&m);
+    printf("Ingresa n ");scanf("%d",&n);
+
+    for(i=0;i<m;i++){
+        for(j=0;j<n;j++){
+            printf("i=%d j=%d\n",i,j);
+        }
     }
 
-    //Algoritmo de Euclides
-    i=0;
-    while(a[i]%b[i]!=0){
-        a[i+1] = b[i];
-        b[i+1] = a[i]%b[i];
-        i++;
+    printf("\n\n\n");
+    system("pause");
+    system("cls");
+
+    for(i=0;i<m;i++){
+        for(j=0;j<n;j++){
+            printf("i%dj%d\t",i,j);
+        }
+        printf("\n");
     }
-    mcd = b[i];
-    mcm = a[0]*b[0]/mcd;
-
-    //Mostrar los vectores del algoritmo
-//    n=i;
-//    printf("\n\n");
-//    for(i=0;i<=n;i++){
-//        printf("%d\t%d\n",a[i],b[i]);
-//    }
 
 
-    printf("\n\nmcd = %d",mcd);
-    printf("\n\nmcm = %d\n\n",mcm);
-
-
+    printf("\n\n\n");
     return 0;
 }
