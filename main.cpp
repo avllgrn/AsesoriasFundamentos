@@ -10,18 +10,13 @@ int main(void){
     printf("Ingresa filas ");scanf("%d",&m);
     printf("Ingresa columnas ");scanf("%d",&n);
 
+    //Matriz Identidad
     for(i=0;i<m;i++){
         for(j=0;j<n;j++){
-            printf("%d\t",M[i][j]);
-        }
-        printf("\n");
-    }
-    printf("\n\n\n");
-
-    //Inicializar una matriz
-    for(i=0;i<m;i++){
-        for(j=0;j<n;j++){
-            M[i][j] = 0;
+            if(i==j)
+                M[i][j] = 1;
+            else
+                M[i][j] = 0;
         }
     }
 
@@ -33,36 +28,6 @@ int main(void){
     }
     printf("\n\n\n");
 
-    //Leer una matriz
-    for(i=0;i<m;i++){
-        for(j=0;j<n;j++){
-            printf("Ingresa M[%d][%d] ",i,j);
-            scanf("%d",&M[i][j]);
-        }
-    }
-
-    for(i=0;i<m;i++){
-        for(j=0;j<n;j++){
-            printf("%d\t",M[i][j]);
-        }
-        printf("\n");
-    }
-    printf("\n\n\n");
-
-    //Leer una matriz
-    for(i=0;i<m;i++){
-        for(j=0;j<n;j++){
-            M[i][j] = rand()%10;
-        }
-    }
-
-    for(i=0;i<m;i++){
-        for(j=0;j<n;j++){
-            printf("%d\t",M[i][j]);
-        }
-        printf("\n");
-    }
-    printf("\n\n\n");
 
     return 0;
 }
