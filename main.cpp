@@ -1,44 +1,31 @@
 #include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
 
 int main(void){
-    int A[50], B[50], C[50], D[50];
-    int i,n1,n2;
-    srand(time(NULL));
+    int a,b,may,men,aux,mcm;
 
-    printf("Ingresa n1 ");
-    scanf("%d",&n1);
-    printf("Ingresa n2 ");
-    scanf("%d",&n2);
-    printf("\n\n");
+    printf("Dame a ");scanf("%d",&a);
+    printf("Dame b ");scanf("%d",&b);
 
-    if(n1!=n2){
-        printf("Error! No pueden sumarse ni restarse...=^(\n");
+    if(a>b){
+        may = a;
+        men = b;
     }
     else{
-        for(i=0; i<n1; i++)
-            A[i] = rand()%10;
-
-        for(i=0; i<n2; i++)
-            B[i] = rand()%10;
-
-        for(i=0; i<n1; i++)
-            C[i] = A[i] + B[i];
-
-        for(i=0; i<n1; i++)
-            printf("%d + %d = %d\n",A[i],B[i],C[i]);
-
-        printf("\n\n");
-
-        for(i=0; i<n1; i++)
-            D[i] = A[i] - B[i];
-
-        for(i=0; i<n1; i++)
-            printf("%d - %d = %d\n",A[i],B[i],D[i]);
-
-        printf("\n\n");
+        may = b;
+        men = a;
     }
+
+    while(may%men!=0){
+        aux=may%men;
+        may=men;
+        men=aux;
+        //printf("mcd = %d\n",men);
+    }
+
+    mcm = a*b/men;
+
+    printf("\n\nmcd = %d",men);
+    printf("\n\nmcm = %d",mcm);
 
     return 0;
 }
